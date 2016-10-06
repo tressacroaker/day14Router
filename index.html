@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="routerApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Router Practice</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body ng-controller="mainCtrl">
+
+    <header>
+      <!-- to switch between views we use ui-sref instead of href -->
+      <a ui-sref="home">Home</a> <a ui-sref="about">About</a> <a ui-sref="contact">Contact</a>
+    </header>
+    <ui-view></ui-view>
+    <!-- whereever we place this ui-view this is where our .state content will show up from the app.js page -->
+    <!-- now when we switch to different views it will always show up. -->
+
+
+
+
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <script src="mainCtrl.js"></script>
+    <script src="homeCtrl.js"></script>
+    <script src="mainServ.js"></script>
+  </body>
+</html>
